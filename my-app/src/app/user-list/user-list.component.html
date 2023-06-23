@@ -1,0 +1,7 @@
+<p class="toBold">List of users : </p>
+
+<ul>
+  <li *ngFor="let user of userlist">
+    <a class="nonLinks smallerSize" [routerLink]="'../user-row/'+user.id">{{user.username}}</a>
+  </li>
+</ul>

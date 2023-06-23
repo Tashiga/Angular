@@ -1,0 +1,20 @@
+<div class="mt-2">
+    <a class="nonLinks smallerSize ml-1" [routerLink]="'../../user-list'">Back</a>
+</div>
+
+<div *ngIf="user" class="card">
+    <p class="center toBold">Profil details</p>
+    <table>
+        <tr>
+            <td>
+                <img src="{{user.avatar}}"/>
+            </td>
+            <td class="smallerSize pl-2">
+                <span class="toBold">User Name : </span> {{user.username}} <br/>
+                <span class="toBold">First Name : </span> {{user.firstname}}<br/>
+                <span class="toBold">Last Name : </span> {{user.lastname}}<br/>
+                <span class="toBold">Email : </span> {{user.email}}
+            </td>
+        </tr>
+    </table>
+</div>

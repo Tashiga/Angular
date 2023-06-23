@@ -1,0 +1,26 @@
+.nonLinks{
+    text-decoration: none;
+    color: balck;
+}
+
+.nonLinks:hover {
+    font-weight: bold;
+}
+
+.toBold{
+    font-weight: bold;
+}
+
+.smallerSize{
+    font-size: small;
+}
+
+.col-5{
+   width: 10%;
+   border: 3px solid green;
+}
+
+.border{
+    border : 3px solid red;
+    max-width: 100px;
+}
