@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class UserFormComponent {
 
+
+  addUser(){
+    console.log("Hello\nyou tried to save a ne user.");
+  }
 }
