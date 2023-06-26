@@ -1,23 +1,25 @@
 <p class="toBold">Formulaire d'enregistrement</p>
 
 <div>
-    <form id="registrationForm">
+    <form id="registrationForm" [formGroup]="userForm" (ngSubmit)="submitUser()">
         <label for="username">Nom d'utilisateur :</label>
-        <input type="text" required><br><br>
+        <input formControlName="username" type="text" required><br><br>
     
         <label for="firstname">Prénom :</label>
-        <input type="text" required><br><br>
+        <input formControlName="firstname" type="text" required><br><br>
     
         <label for="lastname">Nom :</label>
-        <input type="text"required><br><br>
+        <input formControlName="lastname" type="text"required><br><br>
     
         <label for="email">Email :</label>
-        <input type="email" required><br><br>
+        <input formControlName="email" type="email" required><br><br>
     
-        <label for="avatar">Avatar :</label>
-        <input type="file" accept="image/*" required><br><br>
-    
-        <input onclick="addUser()" type= "submit" value="Enregistrer">
+        <!--<label for="avatar">Avatar :</label>
+        <input onchange="onFileSelected($event)" formControlName="avatar" type="file" accept="image/*" required><br><br>
+        -->
+        <input type= "submit" value="Enregistrer">
       </form>
 </div>
+
+
 
