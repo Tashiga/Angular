@@ -2,10 +2,10 @@
   "users": [
     {
       "id": 1,
-      "email": "jose-manuel-singh773@gmx.dev",
+      "username": "Horst_Bala",
       "firstname": "Jakub",
       "lastname": "Jónasson",
-      "username": "Horst_Bala",
+      "email": "jose-manuel-singh773@gmx.dev",
       "avatar": "https://i.pravatar.cc/100"
     },
     {
@@ -90,10 +90,10 @@
     },
     {
       "id": 12,
-      "email": "igor_cheruiyot@web.net",
+      "username": "Idris_Fujita",
       "firstname": "Ilya",
       "lastname": "Ólafsson",
-      "username": "Idris_Fujita",
+      "email": "igor_cheruiyot@web.net",
       "avatar": "https://i.pravatar.cc/100"
     }
   ]

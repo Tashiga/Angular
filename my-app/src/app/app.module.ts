@@ -11,9 +11,9 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserRowComponent } from './user-list/user-row/user-row.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from './user-list/user-service/UserService';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     NgToastModule,
     HttpClientModule,
     NgbModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

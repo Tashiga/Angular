@@ -22,7 +22,7 @@
 </div>
 
 <div *ngIf="user && updateView" class="card">
-    <app-user-form></app-user-form>
+    <app-user-form [formType]="'update'" [id]="user.id"></app-user-form>
 </div>
 
 <ng-template #infoTooltip class="tooltipClass">

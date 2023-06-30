@@ -7,7 +7,7 @@
     </div>
   </li>
 </ul>
-<app-user-form (newItemEvent)="addItem($event)"></app-user-form>
+<app-user-form [formType]="'create'" (newItemEvent)="addItem($event)"></app-user-form>
 
 <ng-template #infoTooltip class="tooltipClass">
   <span class="tooltipClass">delete the user</span>

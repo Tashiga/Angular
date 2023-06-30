@@ -4,7 +4,7 @@
 </div>
 
 <div class="card" *ngIf="displayForm">
-  <div class="smallerSize">
+  <div class="smallerSize" *ngIf="_formType=='create'">
       <form id="registrationForm" [formGroup]="userForm" (ngSubmit)="submitUser()">
         <label for="username">Nom d'utilisateur :</label>
         <input formControlName="username" type="text" required><br><br>
@@ -23,6 +23,26 @@
         -->
         <input type= "submit" value="Enregistrer">
       </form>
+  </div>
+  <div class="smallerSize" *ngIf="_formType=='update'">
+    <form id="registrationForm" (ngSubmit)="updateUser()">
+      <label for="username">Nom d'utilisateur :</label>
+      <input class="usernameClass" name="updateUserName" [(ngModel)]="updateUserName" value="{{updateUserName}}" type="text" required><br><br>
+  
+      <label for="firstname">Prénom :</label>
+      <input type="text" required name="updateFirstName" [(ngModel)]="updateFirstName" value="{{updateFirstName}}"><br><br>
+  
+      <label for="lastname">Nom :</label>
+      <input type="text" required name="updateLastName" [(ngModel)]="updateLastName" value="{{updateLastName}}"><br><br>
+  
+      <label for="email">Email :</label>
+      <input type="email" required name="updateEmail" [(ngModel)]="updateEmail" value="{{updateEmail}}"><br><br>
+  
+      <!--<label for="avatar">Avatar :</label>
+      <input onchange="onFileSelected($event)" formControlName="avatarUpdate" type="file" accept="image/*" required><br><br>
+      -->
+      <input type= "submit" value="Enregistrer">
+    </form>
   </div>
 </div>
 
