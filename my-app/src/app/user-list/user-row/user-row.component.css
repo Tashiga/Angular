@@ -1,8 +1,7 @@
 .card{
-    border: 3px solid black;
-    width: 350px;
+    width: 400px;
     margin: 10px;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 .center{
@@ -39,4 +38,20 @@
 
 .ml-1{
     margin-left: 10px;
+}
+
+.tooltipClass{
+    padding: 5px;
+    margin-right: 5px;
+    color: white;
+    background: #191919;
+    border-radius: 10px;
+    border-style: inset;
+    display: block;
+    font-size: xx-small;
+}
+
+.floatRigth{
+    float: right;
+    margin-right: 10px;
 }

@@ -2,3 +2,35 @@
 .toBold{
     font-weight: bold;
 }
+
+.smallerSize{
+    font-size: x-small;
+}
+
+.center{
+    text-align: center;
+    border: 3px solid rgb(86, 86, 86);
+    width: 100%;
+    margin-bottom: 0;
+    margin-right: 20px;
+    margin: 0;
+    padding: 0px;
+    background: rgb(86, 86, 86);
+    color: white;
+}
+
+.card{
+    border: 3px solid rgb(86, 86, 86);
+    border-top: 1px solid rgb(86, 86, 86);
+    margin: 10px;
+    margin-top: 0;
+    padding: 10px;
+}
+.title{
+    width: 75%;
+    display: inline-block;
+}
+
+.button{
+    display: inline-block;
+}

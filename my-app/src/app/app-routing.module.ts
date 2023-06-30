@@ -11,10 +11,6 @@ const routes: Routes = [
     component: UserDetailsComponent
   },
   {
-    path : 'user-form',
-    component :UserFormComponent
-  },
-  {
     path : 'user-list',
     component : UserListComponent
   },

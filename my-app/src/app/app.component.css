@@ -5,4 +5,6 @@
 .pl-3{
     padding-left: 40px;
     border: 3px solid black;
+    padding-right: 40px;
+    padding-bottom: 30px;
 }

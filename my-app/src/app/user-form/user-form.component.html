@@ -1,7 +1,11 @@
-<p class="toBold">Formulaire d'enregistrement</p>
+<div class="toBold center">
+  <h4 class="title">Formulaire d'enregistrement</h4>
+  <input class="button" type="button" (click)="display()" value="+">
+</div>
 
-<div>
-    <form id="registrationForm" [formGroup]="userForm" (ngSubmit)="submitUser()">
+<div class="card" *ngIf="displayForm">
+  <div class="smallerSize">
+      <form id="registrationForm" [formGroup]="userForm" (ngSubmit)="submitUser()">
         <label for="username">Nom d'utilisateur :</label>
         <input formControlName="username" type="text" required><br><br>
     
@@ -19,7 +23,6 @@
         -->
         <input type= "submit" value="Enregistrer">
       </form>
+  </div>
 </div>
-
-
 

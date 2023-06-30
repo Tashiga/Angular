@@ -1,10 +1,14 @@
 <p class="toBold">List of users : </p>
-<ul>
+<ul class="listClass">
   <li *ngFor="let user of userlist">
     <div class="block">
       <a class="nonLinks smallerSize" [routerLink]="'../user-row/'+user.id">{{user.username}}</a>
-      <input class="floatRigth" type="button" (click)="deleteUser(user.id)" value="delete"/>
+      <input class="floatRigth" type="button" [ngbTooltip]="infoTooltip" (click)="deleteUser(user.id)" placement="top" value="X"/>
     </div>
   </li>
 </ul>
 <app-user-form (newItemEvent)="addItem($event)"></app-user-form>
+
+<ng-template #infoTooltip class="tooltipClass">
+  <span class="tooltipClass">delete the user</span>
+</ng-template> 

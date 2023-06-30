@@ -33,3 +33,18 @@
     display: block;
     margin: 5px;
 }
+
+.tooltipClass{
+    padding: 5px;
+    margin-right: 5px;
+    color: white;
+    background: #191919;
+    border-radius: 10px;
+    border-style: inset;
+    display: block;
+    font-size: xx-small;
+}
+
+.listClass{
+    width: 75%;
+}

@@ -57,4 +57,13 @@ export class UserRowComponent{
     this.updateView = !this.updateView;
   }
 
+  deleteUser(){
+    if(this.user) {
+      console.log("user : ", this.user.id);
+    this._userService.deleteUser(this.user.id).subscribe(data => {
+      console.log("user deleted !");
+    });
+    }
+  }
+
 }

@@ -24,6 +24,7 @@ export class UserFormComponent {
   image: string = "";
   formType: string = "create";
   formTypes: string[] = ["create", "update"];
+  displayForm: boolean = false;
   
   @Output() newItemEvent = new EventEmitter<User>();
 
@@ -46,6 +47,10 @@ export class UserFormComponent {
   
   addUser(){
     console.log("Hello\nyou tried to save a ne user.");
+  }
+
+  display(){
+    this.displayForm = !this.displayForm;
   }
 
 }
