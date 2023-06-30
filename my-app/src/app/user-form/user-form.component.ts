@@ -1,7 +1,6 @@
-import { Component, NgModule } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormControl} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 import { USERS } from '../user-list/user.mock';
 import { Output, EventEmitter } from '@angular/core';
 import { User } from '../@shared/models/user';
@@ -23,6 +22,8 @@ export class UserFormComponent {
   });
 
   image: string = "";
+  formType: string = "create";
+  formTypes: string[] = ["create", "update"];
   
   @Output() newItemEvent = new EventEmitter<User>();
 
@@ -31,18 +32,16 @@ export class UserFormComponent {
   }
 
   submitUser() {
-    console.log(this.userForm.value);
     let user: User = {
       username: this.userForm.value.username,
       lastname: this.userForm.value.lastname,
       firstname: this.userForm.value.firstname,
       email: this.userForm.value.email,
-      id: USERS.length,
+      id: USERS.length+1,
       avatar:""
     };
     this.newItemEvent.emit(user);
     this.toast.success({detail: 'Sucess Message', summary: 'User created sucessfully', duration: 3000});
-    //USERS.push(user);
   }
   
   addUser(){

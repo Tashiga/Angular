@@ -10,6 +10,8 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserRowComponent } from './user-list/user-row/user-row.component';
 import { NgToastModule } from 'ng-angular-popup';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './user-list/user-service/UserService';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { NgToastModule } from 'ng-angular-popup';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgToastModule
+    NgToastModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/@shared/models/user';
 import { USERS } from '../user.mock';
+import { UserService } from '../user-service/UserService';
 
 @Component({
   selector: 'app-user-row',
@@ -23,7 +24,10 @@ export class UserRowComponent{
   userlist: User[] = USERS;
   user: User | undefined;
 
-  constructor(private route : ActivatedRoute) {
+  updateView: boolean = false;
+
+  constructor(private route : ActivatedRoute,
+              private _userService: UserService) {
     this.id = this.route.snapshot.params['ID'];
   }
 
@@ -33,12 +37,24 @@ export class UserRowComponent{
 
   updateUserFromID(){
     if(this.id != null || this.id != undefined){
-      this.userlist.forEach(user=>{
-        if(user.id==this.id){
-          this.user= user;
-        }
+      console.log("id : ", this.id);
+      this._userService.getUser(this.id).subscribe(data => {
+        console.log("data : ", data);
+        let newUser: User = {
+          id: data.id,
+          username: data.username,
+          lastname: data.lastname,
+          firstname: data.firstname,
+          email: data.email,
+          avatar:data.avatar
+        };
+        this.user = newUser;
       });
     }
+  }
+
+  changeView(){
+    this.updateView = !this.updateView;
   }
 
 }

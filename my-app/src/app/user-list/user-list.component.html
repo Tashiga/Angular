@@ -2,6 +2,7 @@
 <ul>
   <li *ngFor="let user of userlist">
     <a class="nonLinks smallerSize" [routerLink]="'../user-row/'+user.id">{{user.username}}</a>
+    <input type="button" (click)="deleteUser(user.id)" value="delete"/>
   </li>
 </ul>
 <app-user-form (newItemEvent)="addItem($event)"></app-user-form>
