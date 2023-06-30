@@ -24,3 +24,12 @@
     border : 3px solid red;
     max-width: 100px;
 }
+
+.floatRigth{
+    float: right;
+}
+
+.block{
+    display: block;
+    margin: 5px;
+}

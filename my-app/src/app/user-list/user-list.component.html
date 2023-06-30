@@ -1,8 +1,10 @@
 <p class="toBold">List of users : </p>
 <ul>
   <li *ngFor="let user of userlist">
-    <a class="nonLinks smallerSize" [routerLink]="'../user-row/'+user.id">{{user.username}}</a>
-    <input type="button" (click)="deleteUser(user.id)" value="delete"/>
+    <div class="block">
+      <a class="nonLinks smallerSize" [routerLink]="'../user-row/'+user.id">{{user.username}}</a>
+      <input class="floatRigth" type="button" (click)="deleteUser(user.id)" value="delete"/>
+    </div>
   </li>
 </ul>
 <app-user-form (newItemEvent)="addItem($event)"></app-user-form>
